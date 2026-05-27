@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: api_raw
+    database: footdata_dw
+    schema: public
+    tables:
+      - name: brasileirao_fixtures_bronze
