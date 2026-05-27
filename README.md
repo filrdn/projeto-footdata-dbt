@@ -7,16 +7,14 @@ Arquitetura do Projeto e Fluxo de Dados
 O ecossistema foi desenhado simulando um ambiente de produção moderno:
 
 [ API REST ] 
-     │ (Request em Python)
-     ▼
-┌────────────────────────────────────────────────────────┐
-│               POSTGRESQL (DATA LAKEHOUSE)              │
-│                                                        │
-│  🥉 Camada Bronze: Ingestão de dados brutos em JSONB   │
-│         │                                              │
-│         ▼ (Parsing JSONB + dbt Models)                │
-│  🥈 Camada Silver: Tabelas de Staging e Typagem        │
-│         │                                              │
-│         ▼ (Window Functions + Agregações dbt)          │
-│  🥇 Camada Gold: Fato Classificação (Materialized)    │
-└────────────────────────────────────────────────────────┘
+
+(Request em Python)
+     
+POSTGRESQL (DATA LAKEHOUSE)
+
+Camada Bronze: Ingestão de dados brutos em JSON
+(Parsing JSONB + dbt Models)
+Camada Silver: Tabelas de Staging e Typagem
+(Window Functions + Agregações dbt)
+Camada Gold: Fato Classificação
+(Materialized)
