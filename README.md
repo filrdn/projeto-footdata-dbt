@@ -1,4 +1,4 @@
-# Pipeline de Dados do Brasileirão: Da API ao Insight com dbt e Postgres
+# Pipeline de Dados do Brasileirão: Da API ao com dbt e Postgres
 
 Este projeto implementa uma esteira de dados analítica end-to-end utilizando o conceito de Modern Data Stack. O objetivo é extrair dados brutos de partidas de futebol via API REST, processá-los utilizando a Arquitetura Medalhão (Bronze, Silver e Gold) e disponibilizar uma tabela de classificação oficial totalmente agregada e performática.
 
